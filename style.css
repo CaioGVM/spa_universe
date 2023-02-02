@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+
+  --bg-img1: url(./assets/mountains-universe-1.png);
+  --bg-img2: url(./assets/mountains-universe-2.png);
+  --bg-img3: url(./assets/mountains-universe-3.png);
+
+  --header-color: #8D8D99;
+  --header-slc-color: #FFFFFF;
+  --txt-color: #E1E1E6;
+  --btn-hover-txt: #02799D;
+}
+body {
+  height: 100vh;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  color: var(--txt-color);
+}
+body.home,
+body.error404 {
+  background-image: var(--bg-img1);
+}
+body.home header ul li:nth-child(2) a {
+  font-weight: 700;
+  color: var(--header-slc-color);
+}
+body.universe {
+  background-image: var(--bg-img2);
+}
+body.universe header ul li:nth-child(3) a {
+  font-weight: 700;
+  color: var(--header-slc-color);
+}
+body.explore {
+  background-image: var(--bg-img3);
+}
+body.explore header ul li:nth-child(4) a {
+  font-weight: 700;
+  color: var(--header-slc-color);
+}
+header {
+  padding: 4rem 7.2rem;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 3.2rem;
+}
+ul li {
+  list-style: none;
+  font-size: 24px;
+  line-height: 22px;
+  align-self: center;
+  min-width: max-content;
+}
+ul li a {
+  text-decoration: none;
+  color: var(--header-color);
+  transition: all .2s;
+}
+ul li a:hover {
+  color: var(--header-slc-color);
+}
+#app {
+  color: var(--txt-color);
+  height: 100%;
+}
+#app h1 {
+  font-size: clamp(4.8rem, 3.2rem + 2vw, 7.2rem);
+  line-height: 125%;
+}
+#app p {
+  font-size: 18px;
+  line-height: 160%;
+  width: 64.8rem;
+  margin-top: 1.6rem;
+  opacity: 0.8;
+}
+#app #home {  
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2.4rem;
+}
+#app #home h1,
+#app #error404 h2 {
+  margin-top: -8vh;
+}
+#app #home button {
+  width: 24rem;
+  height: 6.4rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 1.8rem 3.2rem;
+  color: var(--header-slc-color);
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  transition: all .3s;
+  cursor: pointer;
+}  
+#app #home button:hover {
+  color: var(--btn-hover-txt);
+  background-color: var(--header-slc-color);
+}
+#app #universe,
+#app #explore {
+  padding: 6.4rem 10.2rem;
+}
+#app #error404 {
+  font-size: clamp(4.8rem, 3.2rem + 2vw, 7.2rem);
+  display: grid;
+  height: 100%;
+  place-content: center;
+}
